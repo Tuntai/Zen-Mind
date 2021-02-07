@@ -1,0 +1,13 @@
+{% extends 'zenfulApp/main.html' %}
+{% load static %}
+
+{% block content %}
+
+<h1>USer Page</h1>
+
+<p>{{ current_user }}</p>
+<p>{{ current_user.id }}</p>
+<p>{{ current_user_details }}</p>
+
+
+{% endblock %}

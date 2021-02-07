@@ -1,0 +1,305 @@
+{% extends 'zenfulApp/main.html' %}
+{% load static %}
+{% block content %}
+
+<main role="main">
+
+
+<div class="album py-5 bg-light">
+  <h2 class="mb-5 text-center">Choose an Activity</h2>
+
+
+    <div class="container d-flex justify-content-center" ">
+      <div class="col-md-6">
+          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <form action="" method="POST" class="my-form">
+                <!-- Setting a CSRF token -->
+                {% csrf_token %}
+                {{ formset.management_form }}
+                {% for form in formset %}
+                  {{form.as_p}}
+                  <hr>
+                {% endfor %}
+                <input class="btn btn-sm btn-primary my-3" type="submit" name="Submit">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Activity cards -->
+      <div class="container">
+      <div class="row mb-2">
+
+        <!-- each card -->
+        <div class="col-md-6">
+          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary">Get yourself moving...</strong>
+              <h3 class="mb-0">Go for a walk</h3>
+              <p class="card-text mb-auto">Take a walk outdoors and admire nature, or walk around your house (or on a treadmill, if you have one). Walking is a great low-intensive way to stay active, especially with more people staying indoors.</p>
+              <a href="#" class="stretched-link">Let's do it</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="{% static 'images/walk.svg' %}" class="bd-placeholder-img pr-3" width="200" height="250">
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-6">
+          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success">Smell The pages</strong>
+              <h3 class="mb-0">Read a book</h3>
+              <p class="mb-auto">It's always a great time to pick up a new book, and there are thousands of great books out there, from sci-fi to fantasy to historical fiction to autobiography - the list goes on. Have a glance at our favorites!</p>
+              <a href="#" class="stretched-link">Let's do it</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="{% static 'images/read.svg' %}" class="bd-placeholder-img pr-3" width="200" height="250">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success">Best Escape</strong>
+              <h3 class="mb-0">Listen to music</h3>
+              <p class="mb-auto">Listen to your favorite music artists or find a calming music playlist on Youtube, Spotify, Pandora, or whatever music platform you enjoy using. Take a look for some inspiration here, here, and here.</p>
+              <a href="https://music.youtube.com/playlist?list=RDCLAK5uy_mSaYvcoVvag_GrAc593WX3MoxTLvUXYT8" class="stretched-link">Let's do it</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="{% static 'images/music.svg' %}" class="bd-placeholder-img pr-3" width="200" height="250">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary">Game On...</strong>
+              <h3 class="mb-0">Play a video game</h3>
+              <p class="mb-auto">There are video games catering to all kinds of people, whether you enjoy FPS games, RPGs, sandbox games, or something else! For bonus points, play with a few friends (or against them).</p>
+              <a href="https://www.google.com/logos/2010/pacman10-i.html" class="stretched-link">Let's do it</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="{% static 'images/game.svg' %}" class="bd-placeholder-img pr-3" width="200" height="250">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success">Walk down the memory lane..</strong>
+              <h3 class="mb-0">Talk with friends</h3>
+              <p class="mb-auto">Chat with your childhood friends, talk to your school friends or find someone new and just start a conversation. Some great messaging and voice platforms for
+          long-distance conversations include <a class="purple-link" target="_blank" href="https://zoom.us/">Zoom</a>,
+          <a class="purple-link" target="_blank" href="https://discord.com/">Discord</a>, <a class="purple-link"
+            target="_blank" href="https://meet.google.com/">Google Meet</a>, and more!</p>
+              <a href="#" class="stretched-link">Let's do it</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="{% static 'images/talking.svg' %}" class="bd-placeholder-img pr-3" width="200" height="250">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary">Yum...Yum..</strong>
+              <h3 class="mb-0">Eat your favorite food</h3>
+              <p class="mb-auto">Treat yourself. Even if you're on a diet or
+          strict healthy eating program, it's okay to eat some comfort food once in a while. You can also reward
+          yourself with your favorite food after finishing a project or test.</p>
+              <a href="#" class="stretched-link">Let's do it</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="{% static 'images/cola.svg' %}" class="bd-placeholder-img pr-3" width="200" height="250">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary">Find the peace within..</strong>
+              <h3 class="mb-0">Meditate</h3>
+              <p class="mb-auto">Sit on the floor or the couch and close your
+          eyes, focusing on your breathing and heartbeat. We even have a <a class="purple-link"
+            href="{% url 'meditateAppPage_url' %}">meditation tool</a> to help you regulate your breathing, along with some nice music to
+          set the mood.</p>
+              <a href="{% url 'meditateAppPage_url' %}" class="stretched-link">Let's do it</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="{% static 'images/calm.svg' %}" class="bd-placeholder-img pr-3" width="200" height="250">
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="col-md-6">
+          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary">Prioritize Things</strong>
+              <h3 class="mb-0">Make a to-do list</h3>
+              <p class="mb-auto">Keep all your tasks in order with a to-do list.
+          You can buy a planner or notebook, or use our <a class="purple-link" href="todo.html">priority list tool</a>
+          to get all of your activities in one place, and check each one off when you've finished.</p>
+              <a href=""{% url 'priorityListAppPage_url' %}"" class="stretched-link">Let's do it</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="{% static 'images/todo.svg' %}" class="bd-placeholder-img pr-3" width="200" height="250">
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-6">
+          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary">The best vent for your feelings!</strong>
+              <h3 class="mb-0">Spend time with family</h3>
+              <p class="mb-auto">Now that we're spending more time at home than
+          ever, make sure to set aside some quality family time to talk and relax. If you live alone, make sure to give
+          them a call at least every week to catch up and chat.</p>
+              <a href="#" class="stretched-link">Let's do it</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="{% static 'images/family.svg' %}" class="bd-placeholder-img pr-3" width="200" height="250">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary">Let it go!</strong>
+              <h3 class="mb-0">Vent your feelings</h3>
+              <p class="mb-auto">Find someone - trusted friend, family member,
+          teacher, counselor, you name it - and talk about your frustrations. Getting it all out will make you feel
+          better. </p>
+              <a href="#" class="stretched-link">Let's do it</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="{% static 'images/vent.svg' %}" class="bd-placeholder-img pr-3" width="200" height="250">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary">Live your life and stay young on the floor!</strong>
+              <h3 class="mb-0">Sing or dance</h3>
+              <p class="mb-auto">Fire up the music and sing or dance (or do
+          both) to your favorite song, or just sing/dance without a backing track. If you play a musical instrument, you
+          can even play the chords while singing.</p>
+              <a href="#" class="stretched-link">Let's do it</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="{% static 'images/dance.svg' %}" class="bd-placeholder-img pr-3" width="200" height="250">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary">Keep your body moving!</strong>
+              <h3 class="mb-0">Do some yoga</h3>
+              <p class="mb-auto">Yoga is a great way to improve your flexibility
+          and calm down after - or before - a stressful day. Here are some amazing videos for beginners (<a
+            class="green-link" target="_blank" href="https://www.youtube.com/watch?v=tXWh-dowiLg&t">here</a>, <a
+            class="green-link" target="_blank" href="https://www.youtube.com/watch?v=a3VTQyNZ0Bo&t">here</a> and <a
+            class="green-link" target="_blank" href="https://www.youtube.com/watch?v=4pKly2JojMw">here</a>) to get you
+          started.</p>
+              <a href="https://www.youtube.com/watch?v=4pKly2JojMw" class="stretched-link">Let's do it</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="{% static 'images/yogaball.svg' %}" class="bd-placeholder-img pr-3" width="200" height="250">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary">Sweet Dreams :)</strong>
+              <h3 class="mb-0">Get 8+ hours of sleep</h3>
+              <p class="mb-auto">Pulled an all-nighter to finish your homework
+          or study for a big exam? We've been there too. However, it's really important to get enough sleep so you feel
+          energized the next day - but if you can't, there's always caffeine.</p>
+              <a href="#" class="stretched-link">Let's do it</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="{% static 'images/sleep.svg' %}" class="bd-placeholder-img pr-3" width="200" height="250">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary">Shop your heart out!</strong>
+              <h3 class="mb-0">Go shopping</h3>
+              <p class="mb-auto">Social distancing is still important, so we
+          recommend shopping online at <a class="purple-link" target="_blank" href="https://amazon.com">Amazon</a> or
+          your favorite retailer. If you don't have money to burn, you could always try window shopping, which is still
+          very therapeutic.</p>
+              <a href="#" class="stretched-link">Let's do it</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="{% static 'images/shop.svg' %}" class="bd-placeholder-img pr-3" width="200" height="250">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary">Be the next Picasso!</strong>
+              <h3 class="mb-0">Draw or paint</h3>
+              <p class="mb-auto">Do what you're passionate
+          about and create a masterpiece - or, if you're not very artsy, now's a great time to learn the basics! You
+          could even create digital art using Adobe Illustrator or other software.</p>
+              <a href="#" class="stretched-link">Let's do it</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="{% static 'images/draw.svg' %}" class="bd-placeholder-img pr-3" width="200" height="250">
+            </div>
+          </div>
+        </div>
+
+         <div class="col-md-6">
+          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary">Game On...</strong>
+              <h3 class="mb-0">Write a story</h3>
+              <p class="mb-auto">Write a fantasical fiction novel, a chilling
+          horror story, or your own autobiography! Sit in front of your computer (or get a piece of paper) and create a
+          whole world using only your imagination.</p>
+              <a href="#" class="stretched-link">Let's do it</a>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img src="{% static 'images/type.svg' %}" class="bd-placeholder-img pr-3" width="200" height="250">
+            </div>
+          </div>
+        </div>
+
+        
+
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+</div>
+
+
+{% endblock %}
