@@ -1,0 +1,62 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>ZenMind | Meditate</title>
+<meta charset="UTF-8">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="{% static '/css/main-meditate.css' %}">
+
+<link rel="stylesheet" type="text/css" href="{% static '/css/animate.css' %}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+
+</style>
+</head>
+<body>
+
+
+<div class="hv-container hv-padding-450 hv-green hv-center">
+ <h2>Let's Medidate, and Relax</h2>
+ <br>
+ <br>
+ <br>
+ <div class="hv-content">
+ <img data-aos="fade-in" data-aos-delay="50" src="{% static '/images/circle.svg' %}" alt="Meditation Circle" style="width:15vw; max-width:170px" class="animate__animated animate__slower animate__infinite animate__pulse">
+ <p data-aos="fade-in" data-aos-delay="200" class="hv-xlarge"><br><br><br>Breathe in as it grows.....<br>Breathe out as it shrinks..</p>
+ <audio data-aos="fade-in" style="padding-top:30px" data-aos-delay="300" controls>
+  <source src="{% static '/audio/meditation-music.mp3' %}" type="audio/mp3">
+ </audio>
+
+
+ </div>
+</div>
+
+
+
+
+
+
+<!-- initiate aos -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({once:true, duration:"600"});
+</script>
+
+<!-- Menu stuff -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$("#heart-trigger").click(function () {
+  $("li").toggleClass("visible");
+});
+</script>
+
+
+</body>
+</html>

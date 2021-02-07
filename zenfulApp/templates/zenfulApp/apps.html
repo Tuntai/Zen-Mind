@@ -1,0 +1,52 @@
+{% extends 'zenfulApp/main.html' %}
+{% load static %}
+{% block content %}
+
+<main role="main">
+<div class="album py-5 bg-light">
+
+    <div class="container">
+      <h2 class="mb-5 text-center">Destress Yourself and Focus on what's Important.</h2>
+      <div class="row h-100 d-flex justify-content-center">
+
+        <!-- single card-->
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img src="{% static 'images/meditate.svg' %}" class="mr-2" style="width:340px; height:300px">
+            <div class="card-body">
+              <h3 class="text-muted text-center">Meditate</h3>
+              <p class="card-text">Regulate your breathing and listen to calming music with Meditate.</p>
+              <div class="d-flex justify-content-center align-items-center">
+                <div class="btn-group">
+                  <a href="{% url 'meditateAppPage_url' %}"><button type="button" class="btn btn-lg btn-outline-primary" >Let's Do It!</button></a>
+                  
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- single card-->
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img src="{% static 'images/goals.svg' %}" class="mr-2" style="width:340px; height:300px">
+            <div class="card-body">
+              <h3 class="text-muted text-center">Priority List</h3>
+              <p class="card-text">Write down all your priorities in the Priority List and keep track.</p>
+              <div class="d-flex justify-content-center align-items-center">
+                <div class="btn-group">
+                  <a href="{% url 'priorityListAppPage_url' %}"><button type="button" class="btn btn-lg btn-outline-primary" href="apps.html">Let's Get Started!</button></a>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
