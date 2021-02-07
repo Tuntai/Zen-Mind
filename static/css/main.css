@@ -1,0 +1,30 @@
+#logo{
+}
+body{
+  margin-top: 80px;
+  background-color: #ebeff5;
+  font-family: 'Slabo 27px', serif;
+
+}
+#total-orders{
+  background-color: #4cb4c7;
+}
+#orders-delivered{
+  background-color: #7abecc;
+}
+#orders-pending{
+  background-color: #7CD1C0;
+}
+
+.my-form {
+    display: flex;
+    flex-direction: column;
+}
+.my-form label {
+    .form-label;
+    padding: 5px;
+}
+.my-form input {
+    .form-control;
+    padding: 5px;
+}
