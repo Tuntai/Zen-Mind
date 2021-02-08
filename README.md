@@ -17,6 +17,8 @@ The tools include:
 :robot: username: tuntai <br>
 :key: password: Testpass123
 
+<hr> 
+
 ## To run this web-app in your local systems :open_file_folder:
 
 ### 1. Pre-requisites:
