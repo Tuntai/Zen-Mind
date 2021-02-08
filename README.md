@@ -11,10 +11,10 @@ The tools include:
  - :construction: Back-End: Django, Sqlite3 Database
  - :computer: Front-End: Bootstrap, Html5, Css3, JavaScript, jquery
  
- ### Try Our Web-App @ 
+ ### Try Our Web-App :octocat:
  <a href="https://zen-mind-django-app.herokuapp.com/" target="_blank">:sunflower: Give it a try!!</a>
 
-### For testing you can create our own profile or use the following credentials:
+## For testing you can create our own profile or use the following credentials :closed_lock_with_key:
 :robot: username: tuntai <br>
 :key: password: Testpass123
 
