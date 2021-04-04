@@ -33,9 +33,7 @@ You can also download the folder and extract all the files in your local system.
 Open your IDE install the requirements.
 ### 2. Install Requirements :
 ```sh
-pip install django
-pip install whitenoise
-pip install gunicorn
+pip install -r requirements.txt
 ```
 ### 3. Apply migrations : 
 ```sh
