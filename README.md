@@ -1,3 +1,5 @@
+<img align="center" src="https://github.com/Tuntai/Zen-Mind/blob/main/static/images/logo.png" alt="app" height="150px"/>
+
 # Zen-Mind
 Zen-Mind is made to support everyone who experience anxiety due to academic, social, financial, and career pressure. <br>
 
@@ -16,7 +18,7 @@ The tools include:
  - :construction: Back-End: Django, Sqlite3 Database
  - :computer: Front-End: Bootstrap, Html5, Css3, JavaScript, jquery
  
-## <a href="https://zen-mind-django-app.herokuapp.com/" target="_blank">:sunflower: Give it a try!!</a>
+### <a href="https://zen-mind-django-app.herokuapp.com/" target="_blank">:link: Give it a try!!</a>
 
 #### For testing you can create our own profile or use the following credentials :closed_lock_with_key:
 :robot: username: tuntai <br>
